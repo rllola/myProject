@@ -16,6 +16,13 @@ Start the Vagrant box :
 $ vagrant up
 ```
 
+Run :
+```
+$ npm install & bower install
+```
+
+It will add all the dependencies needed.
+
 Go inside your vargrant box :
 
 ```
@@ -29,13 +36,6 @@ $ cd workspace
 ```
 
 In the folder, you should see all the files related to the project.
-
-Run :
-```
-$ npm install & bower install
-```
-
-It will add all the dependencies needed.
 
 Then start your server :
 ```
