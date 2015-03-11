@@ -1,4 +1,4 @@
-# My Project
+# My Project [![Build Status](https://travis-ci.org/rllola/myProject.svg?branch=master)](https://travis-ci.org/rllola/myProject)
 
 Standard project start up for webdev with Angular, grunt, bower.
 
