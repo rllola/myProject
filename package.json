@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Standard project start up for webdev with Angular, grunt, bower",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt go"
   },
   "keywords": [
     "Angular",

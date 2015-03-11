@@ -5,16 +5,14 @@ module.exports = function(grunt) {
 
         watch: {
     		js: {
-    			files: ['/app/features/**/*.js','/app/shared/**/*.js'],
+    			files: ['<%= jshint.dev.src %>'],
     			tasks: ['jshint']
     		},
     		livereload: {
     			options: {
     				livereload: '<%= connect.options.livereload %>'
     			},
-    			files: [
-    				'app/**/*'
-    			]
+    			files: ['app/**/*']
 			},
 			css: {
 				files: 'app/assets/styles/*.scss',
@@ -22,7 +20,13 @@ module.exports = function(grunt) {
 			}
   		},
 
+        // Verify code style
         jshint: {
+            // Give the configuration file that tell what to verify or not ...
+            options: {
+                jshintrc: '.jshintrc'
+            },
+            //Files to check use for application (No test yet)
             dev: {        
                 src: ['/app/features/**/*.js','/app/shared/**/*.js']
             }
@@ -67,6 +71,7 @@ module.exports = function(grunt) {
     grunt.registerTask('go', [
       'compass',
       'wiredep',
+      'jshint',
       'connect:livereload',
       'watch'
     ]);
