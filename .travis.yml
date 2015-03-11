@@ -3,9 +3,8 @@ node_js:
   - '0.10'
 before_script:
   - 'npm install -g bower grunt-cli'
+  - 'gem install compass' 
+  - 'gem install bootstrap-sass'
   - 'npm install'
   - 'bower install'
-  - 'vagrant up'
-  - 'vagrant ssh'
-  - 'cd workspace'
-  
+

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Standard project start up for webdev with Angular, grunt, bower",
   "scripts": {
-    "test": "grunt go"
+    "test": "grunt test"
   },
   "keywords": [
     "Angular",

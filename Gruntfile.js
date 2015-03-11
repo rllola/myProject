@@ -68,14 +68,22 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-wiredep');
 
+    // grunt go : start the sever for dev purpose
     grunt.registerTask('go', [
-      'compass',
-      'wiredep',
-      'jshint',
-      'connect:livereload',
-      'watch'
+        'compass',
+        'wiredep',
+        'jshint',
+        'connect:livereload',
+        'watch'
     ]);
 
+    // grunt test : do all the test specify. To be run in travis at each git push
+    grunt.registerTask('test', [
+        'compass',
+        'wiredep',
+        'jshint'
+    ]);
 
+    // grunt : Does nothing this useless. Maybe at one point we can add something... don't know you tell me.
     grunt.registerTask('default', []);
 };
