@@ -1,9 +1,12 @@
-'use strict';
+(function() {
+	'use strict';
 
-angular
-    .module('app')
-    .controller('HomeController', HomeController);
+	function HomeController() { 
+		console.log('Welcome');
+	}
 
-function HomeController() { 
-	console.log("Welcome");
-}
+	angular
+	    .module('app')
+	    .controller('HomeController', HomeController);
+
+})();

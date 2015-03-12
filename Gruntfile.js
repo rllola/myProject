@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 			}
   		},
 
-        // Verify code style
+        // Verify code style. Also add the Sublime Text package Jshint Gutter
         jshint: {
             // Give the configuration file that tell what to verify or not ...
             options: {
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 	        	// Change this to '0.0.0.0' to access the server from outside.
 	        	hostname: '0.0.0.0',
 	        	livereload: 35729
-	   		 },
+	   		},
 		    livereload: {
 		    	options: {
 		    		open: true,
@@ -60,6 +60,15 @@ module.exports = function(grunt) {
 	    		ignorePath:  /\.\.\//
 	    	},
 		},
+        // Configuration of Karma framework for running test. See also test/karma.conf.js file for details
+        // Only for unit test (which is really limited)
+        // For end-to-end test use Protactor for AngularJS (no grunt yet...)
+        karma: {
+            unit: {
+                configFile: 'test/karma.conf.js',
+                singleRun: true
+            }
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -67,6 +76,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-wiredep');
+    grunt.loadNpmTasks('grunt-karma');
 
     // grunt go : start the sever for dev purpose
     grunt.registerTask('go', [
@@ -81,7 +91,8 @@ module.exports = function(grunt) {
     grunt.registerTask('test', [
         'compass',
         'wiredep',
-        'jshint'
+        'jshint',
+        'karma'
     ]);
 
     // grunt : Does nothing this useless. Maybe at one point we can add something... don't know you tell me.

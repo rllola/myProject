@@ -1,17 +1,18 @@
-'use strict';
 
+    'use strict';
 
-angular
-    .module('app')
-    .config(appConfig);
+    function appConfig($routeProvider) {
+        $routeProvider
+            .when('/', {
+                templateUrl: 'features/home/homeView.html',
+                controller: 'HomeController'
+            })
+            .otherwise({
+                redirectTo: '/'
+            });
+    }
 
-function appConfig($routeProvider) {
-    $routeProvider
-        .when('/', {
-            templateUrl: 'features/home/homeView.html',
-            controller: 'HomeController'
-        })
-        .otherwise({
-            redirectTo: '/'
-        });
-};
+    angular
+        .module('app')
+        .config(appConfig);
+

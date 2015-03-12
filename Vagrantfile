@@ -15,6 +15,9 @@ gem install compass
 gem install bootstrap-sass
 npm install -g bower
 npm install -g grunt-cli
+apt-get install phantomjs
+npm install
+bower install
 SCRIPT
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
