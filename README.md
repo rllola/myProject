@@ -1,6 +1,6 @@
 # My Project [![Build Status](https://travis-ci.org/rllola/myProject.svg?branch=master)](https://travis-ci.org/rllola/myProject)
 
-[![Join the chat at https://gitter.im/rllola/myProject](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/rllola/myProject?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/rllola/myProject](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/rllola/myProject?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)   [![Codacy Badge](https://www.codacy.com/project/badge/76a6605a26ce4ac5ad97c6c77a9e5217)](https://www.codacy.com/public/contact_5/myProject)
 
 Standard project start up for webdev with Angular, grunt, bower.
 
